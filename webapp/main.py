@@ -6,7 +6,7 @@ import time
 from contextlib import asynccontextmanager
 from pathlib import Path
 
-from fastapi import FastAPI, File, Form, HTTPException, UploadFile
+from fastapi import FastAPI, File, Form, HTTPException, Response, UploadFile
 from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 
@@ -54,8 +54,10 @@ def create_app(
         return FileResponse(STATIC_DIR / "index.html")
 
     @app.get("/api/health")
-    async def health() -> dict:
+    async def health(response: Response) -> dict:
         model = app.state.detector
+        if not model.ready:
+            response.status_code = 503
         return {
             "ready": model.ready,
             "model": model.manifest.get("model", "YOLO26s"),

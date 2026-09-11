@@ -1,0 +1,23 @@
+.git
+.agents
+.venv*
+__pycache__
+*.py[cod]
+*.log
+
+Color Inputs
+dataset
+docs
+literature_review_paper
+outputs
+preliminary
+question
+training
+writing skill
+
+models/*
+!models/model_manifest.json
+!models/best_openvino_model
+!models/best_openvino_model/**
+
+webapp/test_*

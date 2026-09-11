@@ -8,8 +8,6 @@ const state = {
   lastCameraRequest: 0,
   latestDetections: [],
   signCatalog: new Map(),
-  lastFrameBlob: null,
-  hardCaseCount: 0,
   stability: new Map(),
   announcementCooldown: new Map(),
   history: [],
@@ -23,6 +21,7 @@ const ui = {
   imageInput: document.querySelector("#imageInput"),
   chooseButton: document.querySelector("#chooseButton"),
   detectButton: document.querySelector("#detectButton"),
+  speakResultsButton: document.querySelector("#speakResultsButton"),
   fileName: document.querySelector("#fileName"),
   cameraButton: document.querySelector("#cameraButton"),
   stopCameraButton: document.querySelector("#stopCameraButton"),
@@ -48,17 +47,6 @@ const ui = {
   historyBody: document.querySelector("#historyBody"),
   exportButton: document.querySelector("#exportButton"),
   clearButton: document.querySelector("#clearButton"),
-  hardCaseButton: document.querySelector("#hardCaseButton"),
-  hardCaseCount: document.querySelector("#hardCaseCount"),
-  hardCaseDialog: document.querySelector("#hardCaseDialog"),
-  hardCaseForm: document.querySelector("#hardCaseForm"),
-  dialogCloseButton: document.querySelector("#dialogCloseButton"),
-  dialogCancelButton: document.querySelector("#dialogCancelButton"),
-  saveHardCaseButton: document.querySelector("#saveHardCaseButton"),
-  issueType: document.querySelector("#issueType"),
-  expectedClass: document.querySelector("#expectedClass"),
-  hardCaseNotes: document.querySelector("#hardCaseNotes"),
-  signOptions: document.querySelector("#signOptions"),
   toast: document.querySelector("#toast"),
 };
 
@@ -154,32 +142,9 @@ async function loadSignCatalog() {
     const payload = await response.json();
     if (!response.ok) throw new Error(payload.detail || "Sign information is unavailable");
     state.signCatalog = new Map(payload.signs.map((sign) => [sign.class_name, sign]));
-    ui.signOptions.innerHTML = "";
-    payload.signs.forEach((sign) => {
-      const option = document.createElement("option");
-      option.value = sign.class_name;
-      option.label = friendlyName(sign.class_name);
-      ui.signOptions.appendChild(option);
-    });
   } catch (error) {
     showToast(error.message);
   }
-}
-
-async function loadHardCaseCount() {
-  try {
-    const response = await fetch("/api/hard-cases");
-    const payload = await response.json();
-    if (!response.ok) return;
-    updateHardCaseCount(payload.saved);
-  } catch (_) {
-    updateHardCaseCount(0);
-  }
-}
-
-function updateHardCaseCount(count) {
-  state.hardCaseCount = count;
-  ui.hardCaseCount.textContent = `${count} difficult frame${count === 1 ? "" : "s"} saved`;
 }
 
 function setMode(mode) {
@@ -194,8 +159,8 @@ function setMode(mode) {
   ui.cameraControls.classList.toggle("hidden", mode !== "camera");
   ui.dropZone.setAttribute("aria-label", mode === "upload" ? "Choose or drop a traffic sign image" : "Live traffic sign camera");
   state.latestDetections = [];
-  state.lastFrameBlob = mode === "upload" ? state.selectedFile : null;
-  ui.hardCaseButton.disabled = !state.lastFrameBlob;
+  ui.speakResultsButton.classList.add("hidden");
+  ui.speakResultsButton.disabled = true;
   renderResults([], null);
   setGuidance(
     mode === "camera" ? "Camera ready" : "Ready to detect",
@@ -231,11 +196,11 @@ function selectFile(file) {
   image.onload = () => {
     URL.revokeObjectURL(url);
     state.selectedFile = file;
-    state.lastFrameBlob = file;
     state.sourceImage = image;
     ui.fileName.textContent = file.name;
     ui.detectButton.disabled = false;
-    ui.hardCaseButton.disabled = false;
+    ui.speakResultsButton.classList.add("hidden");
+    ui.speakResultsButton.disabled = true;
     ui.emptyState.classList.add("hidden");
     ui.dropZone.classList.add("has-media");
     drawUploadFrame([]);
@@ -301,6 +266,8 @@ async function detectUpload() {
   state.requestInFlight = true;
   ui.processing.classList.remove("hidden");
   ui.detectButton.disabled = true;
+  ui.speakResultsButton.classList.add("hidden");
+  ui.speakResultsButton.disabled = true;
   try {
     const result = await postImage(state.selectedFile, state.selectedFile.name);
     state.latestDetections = result.detections;
@@ -308,6 +275,8 @@ async function detectUpload() {
     renderResults(result.detections, result.total_ms);
     if (result.detections.length) {
       const strongest = [...result.detections].sort((a, b) => b.confidence - a.confidence)[0];
+      ui.speakResultsButton.classList.remove("hidden");
+      ui.speakResultsButton.disabled = false;
       setGuidance(
         speechPhrase(strongest),
         `Detected in the image at ${Math.round(strongest.confidence * 100)}% confidence.`,
@@ -317,7 +286,7 @@ async function detectUpload() {
     } else {
       setGuidance("No supported sign found", "Try a clearer or closer image, or lower the threshold carefully.", "No match");
     }
-    result.detections.forEach((detection) => addHistory(detection, "Image"));
+    result.detections.forEach((detection) => addHistory(detection, "Image", result.total_ms));
   } catch (error) {
     showToast(error.message);
   } finally {
@@ -426,8 +395,6 @@ async function detectCameraFrame() {
     captureContext.drawImage(ui.video, 0, 0, captureCanvas.width, captureCanvas.height);
     const blob = await new Promise((resolve) => captureCanvas.toBlob(resolve, "image/jpeg", 0.82));
     if (!blob) throw new Error("The camera frame could not be captured.");
-    state.lastFrameBlob = blob;
-    ui.hardCaseButton.disabled = false;
     const result = await postImage(blob, "camera-frame.jpg", CAMERA_UNCERTAINTY_FLOOR);
     const classified = CameraSafety.classifyDetections(
       result.detections,
@@ -437,7 +404,7 @@ async function detectCameraFrame() {
     );
     state.latestDetections = [...classified.confirmed, ...classified.uncertain];
     renderResults(state.latestDetections, result.total_ms);
-    updateStableDetections(classified.confirmed, classified.uncertain);
+    updateStableDetections(classified.confirmed, classified.uncertain, performance.now(), result.total_ms);
   } catch (error) {
     showToast(error.message);
     stopCamera();
@@ -446,7 +413,7 @@ async function detectCameraFrame() {
   }
 }
 
-function updateStableDetections(detections, uncertainDetections = [], now = performance.now()) {
+function updateStableDetections(detections, uncertainDetections = [], now = performance.now(), processingMs = null) {
   const strongestByName = new Map();
   detections.forEach((detection) => {
     const current = strongestByName.get(detection.class_name);
@@ -468,6 +435,35 @@ function updateStableDetections(detections, uncertainDetections = [], now = perf
       CameraSafety.advanceTrack(previous, detection, now, CAMERA_TRACK_OPTIONS),
     );
   });
+
+  const newlyConfirmed = sorted.filter((detection) => {
+    const track = state.stability.get(detection.class_name);
+    if (!track || track.announced) return false;
+    const requirement = CameraSafety.confirmationRequirement(track, {
+      highConfidence: CAMERA_HIGH_CONFIDENCE,
+      highConfidenceMatches: CAMERA_HIGH_CONFIDENCE_MATCHES,
+      normalMatches: CAMERA_NORMAL_MATCHES,
+    });
+    return track.count >= requirement;
+  });
+
+  if (newlyConfirmed.length) {
+    newlyConfirmed.forEach((detection) => {
+      addHistory(detection, "Camera", processingMs);
+      const track = state.stability.get(detection.class_name);
+      state.stability.set(detection.class_name, { ...track, announced: true });
+    });
+    speakDetections(newlyConfirmed, { requireToggle: true, respectCooldown: true });
+    setGuidance(
+      newlyConfirmed.map(speechPhrase).join(" "),
+      ui.speechToggle.checked
+        ? `${newlyConfirmed.length} confirmed sign${newlyConfirmed.length === 1 ? "" : "s"} announced.`
+        : `${newlyConfirmed.length} confirmed sign${newlyConfirmed.length === 1 ? "" : "s"}. Voice is muted.`,
+      newlyConfirmed.length === 1 ? "Confirmed" : `${newlyConfirmed.length} confirmed`,
+      "confirmed",
+    );
+    return;
+  }
 
   if (!sorted.length) {
     if (uncertainDetections.length) {
@@ -509,39 +505,55 @@ function updateStableDetections(detections, uncertainDetections = [], now = perf
     "Confirmed",
     "confirmed",
   );
-  sorted
+}
+
+function speakDetections(detections, options = {}) {
+  if (options.requireToggle && !ui.speechToggle.checked) return false;
+  if (!("speechSynthesis" in window) || !("SpeechSynthesisUtterance" in window)) return false;
+
+  const seenClasses = new Set();
+  const distinctDetections = [...detections]
+    .sort((first, second) => second.confidence - first.confidence)
     .filter((detection) => {
-      const track = state.stability.get(detection.class_name);
-      if (!track || track.announced) return false;
-      const requirement = CameraSafety.confirmationRequirement(track, {
-        highConfidence: CAMERA_HIGH_CONFIDENCE,
-        highConfidenceMatches: CAMERA_HIGH_CONFIDENCE_MATCHES,
-        normalMatches: CAMERA_NORMAL_MATCHES,
-      });
-      return track.count >= requirement;
-    })
-    .forEach((detection) => {
-      addHistory(detection, "Camera");
-      announce(detection);
-      const track = state.stability.get(detection.class_name);
-      state.stability.set(detection.class_name, { ...track, announced: true });
+      if (seenClasses.has(detection.class_name)) return false;
+      seenClasses.add(detection.class_name);
+      return true;
     });
-}
-
-function announce(detection) {
-  if (!ui.speechToggle.checked || !("speechSynthesis" in window)) return;
   const now = Date.now();
-  const last = state.announcementCooldown.get(detection.class_name) || 0;
-  if (now - last < 5000) return;
-  state.announcementCooldown.set(detection.class_name, now);
-  const message = new SpeechSynthesisUtterance(speechPhrase(detection));
+  const eligible = distinctDetections.filter((detection) => {
+    if (!options.respectCooldown) return true;
+    const last = state.announcementCooldown.get(detection.class_name) || 0;
+    return now - last >= 5000;
+  });
+  if (!eligible.length) return false;
+  if (options.respectCooldown) {
+    eligible.forEach((detection) => state.announcementCooldown.set(detection.class_name, now));
+  }
+  const message = new SpeechSynthesisUtterance(eligible.map(speechPhrase).join(" "));
   message.rate = 0.92;
-  window.speechSynthesis.cancel();
+  if (options.replaceQueue) window.speechSynthesis.cancel();
   window.speechSynthesis.speak(message);
+  return true;
 }
 
-function addHistory(detection, source) {
-  const entry = { time: new Date(), name: detection.class_name, confidence: detection.confidence, source };
+function speakUploadResults() {
+  if (!state.latestDetections.length) {
+    showToast("Detect signs in an uploaded image first.");
+    return;
+  }
+  if (!speakDetections(state.latestDetections, { replaceQueue: true })) {
+    showToast("Speech is not supported by this browser.");
+  }
+}
+
+function addHistory(detection, source, processingMs) {
+  const entry = {
+    time: new Date(),
+    name: detection.class_name,
+    confidence: detection.confidence,
+    source,
+    processingMs,
+  };
   state.history.unshift(entry);
   state.history = state.history.slice(0, 100);
   renderHistory();
@@ -556,13 +568,14 @@ function renderHistory() {
   ui.historyBody.innerHTML = "";
   state.history.forEach((entry) => {
     const row = document.createElement("tr");
-    row.innerHTML = `<td>${entry.time.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit", second: "2-digit" })}</td><td>${friendlyName(entry.name)}</td><td>${Math.round(entry.confidence * 100)}%</td><td>${entry.source}</td>`;
+    const processingTime = Number.isFinite(entry.processingMs) ? entry.processingMs.toFixed(1) : "—";
+    row.innerHTML = `<td>${entry.time.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit", second: "2-digit" })}</td><td>${friendlyName(entry.name)}</td><td>${Math.round(entry.confidence * 100)}%</td><td>${entry.source}</td><td>${processingTime}</td>`;
     ui.historyBody.appendChild(row);
   });
 }
 
 function exportHistory() {
-  const rows = [["time", "class_name", "confidence", "source"], ...state.history.map((entry) => [entry.time.toISOString(), entry.name, entry.confidence, entry.source])];
+  const rows = [["time", "class_name", "confidence", "source", "processing_ms"], ...state.history.map((entry) => [entry.time.toISOString(), entry.name, entry.confidence, entry.source, entry.processingMs])];
   const csv = rows.map((row) => row.map((value) => `"${String(value).replaceAll('"', '""')}"`).join(",")).join("\n");
   const url = URL.createObjectURL(new Blob([csv], { type: "text/csv" }));
   const link = document.createElement("a");
@@ -572,65 +585,11 @@ function exportHistory() {
   URL.revokeObjectURL(url);
 }
 
-function updateExpectedClassRequirement() {
-  const required = ["missed", "wrong-class"].includes(ui.issueType.value);
-  ui.expectedClass.required = required;
-  ui.expectedClass.placeholder = required ? "Choose the correct class" : "Optional";
-}
-
-function openHardCaseDialog() {
-  if (!state.lastFrameBlob) {
-    showToast("Choose an image or wait for a camera frame first.");
-    return;
-  }
-  ui.hardCaseForm.reset();
-  updateExpectedClassRequirement();
-  ui.hardCaseDialog.showModal();
-}
-
-async function saveHardCase(event) {
-  event.preventDefault();
-  if (!state.lastFrameBlob) return;
-  const expected = ui.expectedClass.value.trim();
-  if (expected && !state.signCatalog.has(expected)) {
-    showToast("Choose a class from the 63-sign list.");
-    ui.expectedClass.focus();
-    return;
-  }
-
-  const form = new FormData();
-  const fileName = state.mode === "camera" ? "camera-hard-case.jpg" : (state.selectedFile?.name || "upload-hard-case.jpg");
-  form.append("image", state.lastFrameBlob, fileName);
-  form.append("source", state.mode);
-  form.append("issue_type", ui.issueType.value);
-  form.append("expected_class", expected);
-  form.append("predicted_classes", JSON.stringify([
-    ...new Set(state.latestDetections.map((item) => item.detector_class_name || item.class_name)),
-  ]));
-  form.append("notes", ui.hardCaseNotes.value.trim());
-  form.append("confidence", confidence().toFixed(2));
-
-  ui.saveHardCaseButton.disabled = true;
-  ui.saveHardCaseButton.textContent = "Saving";
-  try {
-    const response = await fetch("/api/hard-cases", { method: "POST", body: form });
-    const payload = await response.json();
-    if (!response.ok) throw new Error(payload.detail || "The difficult frame could not be saved");
-    updateHardCaseCount(payload.total_saved);
-    ui.hardCaseDialog.close();
-    showToast("Difficult frame saved for later annotation.");
-  } catch (error) {
-    showToast(error.message);
-  } finally {
-    ui.saveHardCaseButton.disabled = false;
-    ui.saveHardCaseButton.textContent = "Save frame";
-  }
-}
-
 ui.modeButtons.forEach((button) => button.addEventListener("click", () => setMode(button.dataset.mode)));
 ui.chooseButton.addEventListener("click", () => ui.imageInput.click());
 ui.imageInput.addEventListener("change", () => selectFile(ui.imageInput.files[0]));
 ui.detectButton.addEventListener("click", detectUpload);
+ui.speakResultsButton.addEventListener("click", speakUploadResults);
 ui.cameraButton.addEventListener("click", startCamera);
 ui.stopCameraButton.addEventListener("click", stopCamera);
 ui.confidenceSlider.addEventListener("input", () => {
@@ -639,11 +598,6 @@ ui.confidenceSlider.addEventListener("input", () => {
 });
 ui.clearButton.addEventListener("click", () => { state.history = []; renderHistory(); });
 ui.exportButton.addEventListener("click", exportHistory);
-ui.hardCaseButton.addEventListener("click", openHardCaseDialog);
-ui.hardCaseForm.addEventListener("submit", saveHardCase);
-ui.dialogCloseButton.addEventListener("click", () => ui.hardCaseDialog.close());
-ui.dialogCancelButton.addEventListener("click", () => ui.hardCaseDialog.close());
-ui.issueType.addEventListener("change", updateExpectedClassRequirement);
 ui.dropZone.addEventListener("click", () => { if (state.mode === "upload") ui.imageInput.click(); });
 ui.dropZone.addEventListener("keydown", (event) => { if (state.mode === "upload" && (event.key === "Enter" || event.key === " ")) ui.imageInput.click(); });
 ["dragenter", "dragover"].forEach((eventName) => ui.dropZone.addEventListener(eventName, (event) => { event.preventDefault(); if (state.mode === "upload") ui.dropZone.classList.add("dragging"); }));
@@ -651,4 +605,4 @@ ui.dropZone.addEventListener("keydown", (event) => { if (state.mode === "upload"
 ui.dropZone.addEventListener("drop", (event) => { if (state.mode === "upload") selectFile(event.dataTransfer.files[0]); });
 window.addEventListener("beforeunload", stopCamera);
 
-Promise.all([checkHealth(), loadSignCatalog(), loadHardCaseCount()]);
+Promise.all([checkHealth(), loadSignCatalog()]);
