@@ -46,6 +46,57 @@ miniproject/
 
 Older Android/ncnn documents and conversion helpers are archival material from the previous project direction. They are not part of the active server-side web pipeline.
 
+## Run on a phone with Cloudflare Tunnel
+
+Cloudflare Tunnel gives the local FastAPI server a temporary public HTTPS URL. The
+laptop performs all YOLO26/OpenVINO inference, so it must stay powered on, awake,
+connected to the internet, and running both commands below.
+
+### One-time setup
+
+From PowerShell in the repository root, install the Python dependencies and the
+Cloudflare Tunnel client:
+
+```powershell
+python -m pip install -r requirements-web.txt
+winget install --exact --id Cloudflare.cloudflared
+```
+
+Close and reopen PowerShell after installing `cloudflared` so the updated PATH is
+available.
+
+### Start the website
+
+Open the first PowerShell window in the repository root and run:
+
+```powershell
+python -m uvicorn webapp.main:app --host 127.0.0.1 --port 8000
+```
+
+Wait until the terminal shows `Application startup complete`. Keep that window
+open. In a second PowerShell window, run:
+
+```powershell
+cloudflared tunnel --url http://127.0.0.1:8000
+```
+
+If PowerShell cannot find `cloudflared`, use its installed path directly:
+
+```powershell
+& "C:\Program Files (x86)\cloudflared\cloudflared.exe" tunnel --url http://127.0.0.1:8000
+```
+
+Cloudflare prints a URL similar to
+`https://example-words.trycloudflare.com`. Open that HTTPS URL on a phone and
+allow camera access. On Android Chrome, select **Menu > Add to Home screen** to
+launch it like an app.
+
+The Quick Tunnel address is temporary and changes whenever the tunnel is
+restarted. Closing either terminal, allowing the laptop to sleep, restarting the
+laptop, or losing internet access makes the public website unavailable. Share the
+link only with intended testers because anyone who has it can access the public
+endpoint.
+
 ## Next phase
 
 1. Validate Version 3 with longer laptop-camera and known no-sign footage, including p50/p95 latency and missed-sign counts.
