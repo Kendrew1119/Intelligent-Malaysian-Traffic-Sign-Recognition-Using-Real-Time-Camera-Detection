@@ -1,0 +1,182 @@
+[
+  {
+    "file": "frame_01.png",
+    "expected": [
+      "accident-prone-area-warning",
+      "bicycle-path",
+      "bicycle-warning",
+      "cars-only"
+    ],
+    "class_ids": [
+      0,
+      1,
+      2,
+      6
+    ]
+  },
+  {
+    "file": "frame_02.png",
+    "expected": [
+      "children-crossing-warning",
+      "construction-ahead-warning",
+      "crossroad-right-warning",
+      "gated-railway-crossing-ahead-warning"
+    ],
+    "class_ids": [
+      9,
+      10,
+      13,
+      14
+    ]
+  },
+  {
+    "file": "frame_03.png",
+    "expected": [
+      "general-warning",
+      "give-way",
+      "left-or-right",
+      "left-turn-only"
+    ],
+    "class_ids": [
+      15,
+      16,
+      18,
+      19
+    ]
+  },
+  {
+    "file": "frame_04.png",
+    "expected": [
+      "no-cars",
+      "no-entry",
+      "no-horn",
+      "no-left"
+    ],
+    "class_ids": [
+      20,
+      21,
+      22,
+      23
+    ]
+  },
+  {
+    "file": "frame_05.png",
+    "expected": [
+      "no-left-and-right",
+      "no-overtaking",
+      "no-right",
+      "no-straight"
+    ],
+    "class_ids": [
+      24,
+      25,
+      27,
+      28
+    ]
+  },
+  {
+    "file": "frame_06.png",
+    "expected": [
+      "no-straight-or-left",
+      "no-uturn",
+      "pass-obstacle-on-either-side",
+      "pass-right"
+    ],
+    "class_ids": [
+      29,
+      30,
+      32,
+      33
+    ]
+  },
+  {
+    "file": "frame_07.png",
+    "expected": [
+      "pedestrian-crossing-warning",
+      "railway-crossing-ahead-warning",
+      "reverse-turn-warning",
+      "right-turn-only"
+    ],
+    "class_ids": [
+      34,
+      35,
+      36,
+      37
+    ]
+  },
+  {
+    "file": "frame_08.png",
+    "expected": [
+      "roundabout",
+      "sharp-right-turn-warning",
+      "slowdown-warning",
+      "speed-limit-15"
+    ],
+    "class_ids": [
+      41,
+      42,
+      44,
+      45
+    ]
+  },
+  {
+    "file": "frame_09.png",
+    "expected": [
+      "speed-limit-30",
+      "speed-limit-40",
+      "speed-limit-5",
+      "speed-limit-50"
+    ],
+    "class_ids": [
+      46,
+      47,
+      48,
+      49
+    ]
+  },
+  {
+    "file": "frame_10.png",
+    "expected": [
+      "speed-limit-60",
+      "speed-limit-80",
+      "steep-descent-warning",
+      "stop-for-inspection"
+    ],
+    "class_ids": [
+      50,
+      51,
+      52,
+      53
+    ]
+  },
+  {
+    "file": "frame_11.png",
+    "expected": [
+      "stop-sign",
+      "straight-only",
+      "straight-or-right",
+      "traffic-light-ahead"
+    ],
+    "class_ids": [
+      54,
+      55,
+      56,
+      58
+    ]
+  },
+  {
+    "file": "frame_12.png",
+    "expected": [
+      "use-horn",
+      "uturn-lane",
+      "village-ahead-warning",
+      "winding-road-warning"
+    ],
+    "class_ids": [
+      59,
+      60,
+      61,
+      62
+    ]
+  }
+]

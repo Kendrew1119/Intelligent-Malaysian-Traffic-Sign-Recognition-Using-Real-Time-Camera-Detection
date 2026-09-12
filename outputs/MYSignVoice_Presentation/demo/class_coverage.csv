@@ -1,0 +1,64 @@
+﻿class_id,class_name,status,file
+0,accident-prone-area-warning,Image available,00_accident-prone-area-warning.png
+1,bicycle-path,Image available,01_bicycle-path.png
+2,bicycle-warning,Image available,02_bicycle-warning.png
+3,bumps-warning,Add image manually,
+4,bus-stop,Add image manually,
+5,camera-operation-zone,Add image manually,
+6,cars-only,Image available,06_cars-only.png
+7,chevron-left,Add image manually,
+8,chevron-right,Add image manually,
+9,children-crossing-warning,Image available,09_children-crossing-warning.png
+10,construction-ahead-warning,Image available,10_construction-ahead-warning.png
+11,cow-nearby-warning,Add image manually,
+12,crossroad-left-warning,Add image manually,
+13,crossroad-right-warning,Image available,13_crossroad-right-warning.png
+14,gated-railway-crossing-ahead-warning,Image available,14_gated-railway-crossing-ahead-warning.png
+15,general-warning,Image available,15_general-warning.png
+16,give-way,Image available,16_give-way.png
+17,height-limit,Add image manually,
+18,left-or-right,Image available,18_left-or-right.png
+19,left-turn-only,Image available,19_left-turn-only.png
+20,no-cars,Image available,20_no-cars.png
+21,no-entry,Image available,21_no-entry.png
+22,no-horn,Image available,22_no-horn.png
+23,no-left,Image available,23_no-left.png
+24,no-left-and-right,Image available,24_no-left-and-right.png
+25,no-overtaking,Image available,25_no-overtaking.png
+26,no-parking,Add image manually,
+27,no-right,Image available,27_no-right.png
+28,no-straight,Image available,28_no-straight.png
+29,no-straight-or-left,Image available,29_no-straight-or-left.png
+30,no-uturn,Image available,30_no-uturn.png
+31,parking-area,Add image manually,
+32,pass-obstacle-on-either-side,Image available,32_pass-obstacle-on-either-side.png
+33,pass-right,Image available,33_pass-right.png
+34,pedestrian-crossing-warning,Image available,34_pedestrian-crossing-warning.png
+35,railway-crossing-ahead-warning,Image available,35_railway-crossing-ahead-warning.png
+36,reverse-turn-warning,Image available,36_reverse-turn-warning.png
+37,right-turn-only,Image available,37_right-turn-only.png
+38,road-narrows-left-warning,Add image manually,
+39,road-narrows-right-warning,Add image manually,
+40,roadway-diverges-warning,Add image manually,
+41,roundabout,Image available,41_roundabout.png
+42,sharp-right-turn-warning,Image available,42_sharp-right-turn-warning.png
+43,slippery-road-warning,Add image manually,
+44,slowdown-warning,Image available,44_slowdown-warning.png
+45,speed-limit-15,Image available,45_speed-limit-15.png
+46,speed-limit-30,Image available,46_speed-limit-30.png
+47,speed-limit-40,Image available,47_speed-limit-40.png
+48,speed-limit-5,Image available,48_speed-limit-5.png
+49,speed-limit-50,Image available,49_speed-limit-50.png
+50,speed-limit-60,Image available,50_speed-limit-60.png
+51,speed-limit-80,Image available,51_speed-limit-80.png
+52,steep-descent-warning,Image available,52_steep-descent-warning.png
+53,stop-for-inspection,Image available,53_stop-for-inspection.png
+54,stop-sign,Image available,54_stop-sign.png
+55,straight-only,Image available,55_straight-only.png
+56,straight-or-right,Image available,56_straight-or-right.png
+57,towing-area,Add image manually,
+58,traffic-light-ahead,Image available,58_traffic-light-ahead.png
+59,use-horn,Image available,59_use-horn.png
+60,uturn-lane,Image available,60_uturn-lane.png
+61,village-ahead-warning,Image available,61_village-ahead-warning.png
+62,winding-road-warning,Image available,62_winding-road-warning.png

@@ -119,3 +119,26 @@ Debug/
 node_modules/
 *.docx
 tmp/
+
+# --- Presentation build artifacts (keep build scripts and image inputs) ---
+/outputs/presentation_work/template/
+/outputs/presentation_work/build-proto.json
+/outputs/presentation_work/evidence.json
+/outputs/presentation_work/deck-content.json
+/outputs/presentation_work/MYSignVoice_*.txt
+/outputs/presentation_work/draft/
+/outputs/presentation_work/rendered/
+/outputs/presentation_work/final_rendered/
+/outputs/presentation_work/.chart-data-*/
+/outputs/presentation_work/.codex-finalizer/
+/outputs/presentation_work/git_tracking_review/
+/outputs/presentation_work/*.validation.json
+/outputs/presentation_work/**/*.validation.json
+/outputs/presentation_work/*.inspect.ndjson
+/outputs/presentation_work/**/*.inspect.ndjson
+/.chart-data-*/
+
+# Unpacked demo images are generated/copies; keep the final demo ZIP and manifests.
+/outputs/MYSignVoice_Presentation/demo/single_signs/
+/outputs/MYSignVoice_Presentation/demo/four_sign_frames/
+/outputs/MYSignVoice_Presentation/demo/successful_four_sign_frames/

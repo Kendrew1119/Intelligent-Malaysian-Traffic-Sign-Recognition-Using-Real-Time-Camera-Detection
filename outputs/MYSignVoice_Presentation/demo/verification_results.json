@@ -1,0 +1,2546 @@
+[
+  {
+    "kind": "single",
+    "file": "00_accident-prone-area-warning.png",
+    "expected": [
+      "accident-prone-area-warning"
+    ],
+    "passed": true,
+    "missing": [],
+    "extra": [],
+    "response": {
+      "width": 92,
+      "height": 90,
+      "inference_ms": 519.8,
+      "ocr_ms": 0.0,
+      "detections": [
+        {
+          "class_id": 0,
+          "class_name": "accident-prone-area-warning",
+          "confidence": 0.4475,
+          "bbox": {
+            "x1": 19.05,
+            "y1": 19.73,
+            "x2": 63.61,
+            "y2": 62.1
+          }
+        }
+      ],
+      "total_ms": 550.1,
+      "confidence_threshold": 0.2,
+      "round_trip_ms": 755.7
+    }
+  },
+  {
+    "kind": "single",
+    "file": "01_bicycle-path.png",
+    "expected": [
+      "bicycle-path"
+    ],
+    "passed": true,
+    "missing": [],
+    "extra": [],
+    "response": {
+      "width": 230,
+      "height": 220,
+      "inference_ms": 73.8,
+      "ocr_ms": 0.0,
+      "detections": [
+        {
+          "class_id": 1,
+          "class_name": "bicycle-path",
+          "confidence": 0.9688,
+          "bbox": {
+            "x1": 27.63,
+            "y1": 21.65,
+            "x2": 208.8,
+            "y2": 200.53
+          }
+        }
+      ],
+      "total_ms": 81.4,
+      "confidence_threshold": 0.2,
+      "round_trip_ms": 101.6
+    }
+  },
+  {
+    "kind": "single",
+    "file": "02_bicycle-warning.png",
+    "expected": [
+      "bicycle-warning"
+    ],
+    "passed": true,
+    "missing": [],
+    "extra": [],
+    "response": {
+      "width": 210,
+      "height": 200,
+      "inference_ms": 54.2,
+      "ocr_ms": 0.0,
+      "detections": [
+        {
+          "class_id": 2,
+          "class_name": "bicycle-warning",
+          "confidence": 0.8921,
+          "bbox": {
+            "x1": 28.71,
+            "y1": 28.46,
+            "x2": 182.77,
+            "y2": 163.9
+          }
+        }
+      ],
+      "total_ms": 58.7,
+      "confidence_threshold": 0.2,
+      "round_trip_ms": 63.1
+    }
+  },
+  {
+    "kind": "single",
+    "file": "06_cars-only.png",
+    "expected": [
+      "cars-only"
+    ],
+    "passed": true,
+    "missing": [],
+    "extra": [],
+    "response": {
+      "width": 155,
+      "height": 155,
+      "inference_ms": 49.1,
+      "ocr_ms": 0.0,
+      "detections": [
+        {
+          "class_id": 6,
+          "class_name": "cars-only",
+          "confidence": 0.9634,
+          "bbox": {
+            "x1": 22.89,
+            "y1": 19.25,
+            "x2": 139.02,
+            "y2": 136.11
+          }
+        }
+      ],
+      "total_ms": 53.4,
+      "confidence_threshold": 0.2,
+      "round_trip_ms": 56.7
+    }
+  },
+  {
+    "kind": "single",
+    "file": "09_children-crossing-warning.png",
+    "expected": [
+      "children-crossing-warning"
+    ],
+    "passed": true,
+    "missing": [],
+    "extra": [],
+    "response": {
+      "width": 113,
+      "height": 107,
+      "inference_ms": 47.3,
+      "ocr_ms": 0.0,
+      "detections": [
+        {
+          "class_id": 9,
+          "class_name": "children-crossing-warning",
+          "confidence": 0.957,
+          "bbox": {
+            "x1": 12.32,
+            "y1": 14.88,
+            "x2": 88.46,
+            "y2": 85.81
+          }
+        }
+      ],
+      "total_ms": 50.2,
+      "confidence_threshold": 0.2,
+      "round_trip_ms": 54.5
+    }
+  },
+  {
+    "kind": "single",
+    "file": "10_construction-ahead-warning.png",
+    "expected": [
+      "construction-ahead-warning"
+    ],
+    "passed": true,
+    "missing": [],
+    "extra": [],
+    "response": {
+      "width": 193,
+      "height": 168,
+      "inference_ms": 46.4,
+      "ocr_ms": 0.0,
+      "detections": [
+        {
+          "class_id": 10,
+          "class_name": "construction-ahead-warning",
+          "confidence": 0.9038,
+          "bbox": {
+            "x1": 36.6,
+            "y1": 27.67,
+            "x2": 160.13,
+            "y2": 131.33
+          }
+        }
+      ],
+      "total_ms": 49.5,
+      "confidence_threshold": 0.2,
+      "round_trip_ms": 52.8
+    }
+  },
+  {
+    "kind": "single",
+    "file": "13_crossroad-right-warning.png",
+    "expected": [
+      "crossroad-right-warning"
+    ],
+    "passed": true,
+    "missing": [],
+    "extra": [],
+    "response": {
+      "width": 206,
+      "height": 209,
+      "inference_ms": 46.5,
+      "ocr_ms": 0.0,
+      "detections": [
+        {
+          "class_id": 13,
+          "class_name": "crossroad-right-warning",
+          "confidence": 0.9141,
+          "bbox": {
+            "x1": 32.25,
+            "y1": 32.82,
+            "x2": 186.79,
+            "y2": 171.12
+          }
+        }
+      ],
+      "total_ms": 51.3,
+      "confidence_threshold": 0.2,
+      "round_trip_ms": 55.7
+    }
+  },
+  {
+    "kind": "single",
+    "file": "14_gated-railway-crossing-ahead-warning.png",
+    "expected": [
+      "gated-railway-crossing-ahead-warning"
+    ],
+    "passed": true,
+    "missing": [],
+    "extra": [],
+    "response": {
+      "width": 181,
+      "height": 172,
+      "inference_ms": 47.1,
+      "ocr_ms": 0.0,
+      "detections": [
+        {
+          "class_id": 14,
+          "class_name": "gated-railway-crossing-ahead-warning",
+          "confidence": 0.9282,
+          "bbox": {
+            "x1": 36.48,
+            "y1": 31.18,
+            "x2": 139.0,
+            "y2": 131.79
+          }
+        }
+      ],
+      "total_ms": 50.9,
+      "confidence_threshold": 0.2,
+      "round_trip_ms": 55.1
+    }
+  },
+  {
+    "kind": "single",
+    "file": "15_general-warning.png",
+    "expected": [
+      "general-warning"
+    ],
+    "passed": true,
+    "missing": [],
+    "extra": [],
+    "response": {
+      "width": 124,
+      "height": 108,
+      "inference_ms": 43.1,
+      "ocr_ms": 0.0,
+      "detections": [
+        {
+          "class_id": 15,
+          "class_name": "general-warning",
+          "confidence": 0.9194,
+          "bbox": {
+            "x1": 24.7,
+            "y1": 20.44,
+            "x2": 86.51,
+            "y2": 68.83
+          }
+        }
+      ],
+      "total_ms": 45.4,
+      "confidence_threshold": 0.2,
+      "round_trip_ms": 49.4
+    }
+  },
+  {
+    "kind": "single",
+    "file": "16_give-way.png",
+    "expected": [
+      "give-way"
+    ],
+    "passed": true,
+    "missing": [],
+    "extra": [],
+    "response": {
+      "width": 213,
+      "height": 179,
+      "inference_ms": 57.8,
+      "ocr_ms": 0.0,
+      "detections": [
+        {
+          "class_id": 16,
+          "class_name": "give-way",
+          "confidence": 0.959,
+          "bbox": {
+            "x1": 31.7,
+            "y1": 16.22,
+            "x2": 190.87,
+            "y2": 148.52
+          }
+        }
+      ],
+      "total_ms": 62.0,
+      "confidence_threshold": 0.2,
+      "round_trip_ms": 65.4
+    }
+  },
+  {
+    "kind": "single",
+    "file": "18_left-or-right.png",
+    "expected": [
+      "left-or-right"
+    ],
+    "passed": true,
+    "missing": [],
+    "extra": [],
+    "response": {
+      "width": 165,
+      "height": 150,
+      "inference_ms": 60.3,
+      "ocr_ms": 0.0,
+      "detections": [
+        {
+          "class_id": 18,
+          "class_name": "left-or-right",
+          "confidence": 0.9707,
+          "bbox": {
+            "x1": 16.69,
+            "y1": 8.25,
+            "x2": 149.79,
+            "y2": 140.12
+          }
+        }
+      ],
+      "total_ms": 63.7,
+      "confidence_threshold": 0.2,
+      "round_trip_ms": 68.1
+    }
+  },
+  {
+    "kind": "single",
+    "file": "19_left-turn-only.png",
+    "expected": [
+      "left-turn-only"
+    ],
+    "passed": true,
+    "missing": [],
+    "extra": [],
+    "response": {
+      "width": 143,
+      "height": 127,
+      "inference_ms": 57.2,
+      "ocr_ms": 0.0,
+      "detections": [
+        {
+          "class_id": 19,
+          "class_name": "left-turn-only",
+          "confidence": 0.978,
+          "bbox": {
+            "x1": 23.21,
+            "y1": 10.0,
+            "x2": 121.44,
+            "y2": 109.93
+          }
+        }
+      ],
+      "total_ms": 60.6,
+      "confidence_threshold": 0.2,
+      "round_trip_ms": 66.0
+    }
+  },
+  {
+    "kind": "single",
+    "file": "20_no-cars.png",
+    "expected": [
+      "no-cars"
+    ],
+    "passed": true,
+    "missing": [],
+    "extra": [],
+    "response": {
+      "width": 136,
+      "height": 130,
+      "inference_ms": 57.0,
+      "ocr_ms": 0.0,
+      "detections": [
+        {
+          "class_id": 20,
+          "class_name": "no-cars",
+          "confidence": 0.9126,
+          "bbox": {
+            "x1": 17.08,
+            "y1": 10.78,
+            "x2": 126.44,
+            "y2": 120.06
+          }
+        }
+      ],
+      "total_ms": 61.8,
+      "confidence_threshold": 0.2,
+      "round_trip_ms": 65.8
+    }
+  },
+  {
+    "kind": "single",
+    "file": "21_no-entry.png",
+    "expected": [
+      "no-entry"
+    ],
+    "passed": true,
+    "missing": [],
+    "extra": [],
+    "response": {
+      "width": 163,
+      "height": 161,
+      "inference_ms": 58.0,
+      "ocr_ms": 0.0,
+      "detections": [
+        {
+          "class_id": 21,
+          "class_name": "no-entry",
+          "confidence": 0.9248,
+          "bbox": {
+            "x1": 32.25,
+            "y1": 29.54,
+            "x2": 118.24,
+            "y2": 129.0
+          }
+        }
+      ],
+      "total_ms": 63.9,
+      "confidence_threshold": 0.2,
+      "round_trip_ms": 67.8
+    }
+  },
+  {
+    "kind": "single",
+    "file": "22_no-horn.png",
+    "expected": [
+      "no-horn"
+    ],
+    "passed": true,
+    "missing": [],
+    "extra": [],
+    "response": {
+      "width": 114,
+      "height": 103,
+      "inference_ms": 51.1,
+      "ocr_ms": 0.0,
+      "detections": [
+        {
+          "class_id": 22,
+          "class_name": "no-horn",
+          "confidence": 0.9199,
+          "bbox": {
+            "x1": 14.27,
+            "y1": 10.73,
+            "x2": 96.63,
+            "y2": 93.07
+          }
+        }
+      ],
+      "total_ms": 53.1,
+      "confidence_threshold": 0.2,
+      "round_trip_ms": 57.5
+    }
+  },
+  {
+    "kind": "single",
+    "file": "23_no-left.png",
+    "expected": [
+      "no-left"
+    ],
+    "passed": true,
+    "missing": [],
+    "extra": [],
+    "response": {
+      "width": 65,
+      "height": 58,
+      "inference_ms": 87.9,
+      "ocr_ms": 0.0,
+      "detections": [
+        {
+          "class_id": 23,
+          "class_name": "no-left",
+          "confidence": 0.9717,
+          "bbox": {
+            "x1": 3.88,
+            "y1": 3.07,
+            "x2": 62.46,
+            "y2": 57.79
+          }
+        }
+      ],
+      "total_ms": 92.9,
+      "confidence_threshold": 0.2,
+      "round_trip_ms": 115.5
+    }
+  },
+  {
+    "kind": "single",
+    "file": "24_no-left-and-right.png",
+    "expected": [
+      "no-left-and-right"
+    ],
+    "passed": true,
+    "missing": [],
+    "extra": [],
+    "response": {
+      "width": 94,
+      "height": 100,
+      "inference_ms": 89.9,
+      "ocr_ms": 0.0,
+      "detections": [
+        {
+          "class_id": 24,
+          "class_name": "no-left-and-right",
+          "confidence": 0.9561,
+          "bbox": {
+            "x1": 13.32,
+            "y1": 11.84,
+            "x2": 85.39,
+            "y2": 86.64
+          }
+        }
+      ],
+      "total_ms": 96.1,
+      "confidence_threshold": 0.2,
+      "round_trip_ms": 101.1
+    }
+  },
+  {
+    "kind": "single",
+    "file": "25_no-overtaking.png",
+    "expected": [
+      "no-overtaking"
+    ],
+    "passed": true,
+    "missing": [],
+    "extra": [],
+    "response": {
+      "width": 120,
+      "height": 114,
+      "inference_ms": 59.1,
+      "ocr_ms": 0.0,
+      "detections": [
+        {
+          "class_id": 25,
+          "class_name": "no-overtaking",
+          "confidence": 0.9624,
+          "bbox": {
+            "x1": 12.68,
+            "y1": 16.55,
+            "x2": 108.56,
+            "y2": 102.94
+          }
+        }
+      ],
+      "total_ms": 61.8,
+      "confidence_threshold": 0.2,
+      "round_trip_ms": 66.9
+    }
+  },
+  {
+    "kind": "single",
+    "file": "27_no-right.png",
+    "expected": [
+      "no-right"
+    ],
+    "passed": true,
+    "missing": [],
+    "extra": [],
+    "response": {
+      "width": 117,
+      "height": 106,
+      "inference_ms": 52.6,
+      "ocr_ms": 0.0,
+      "detections": [
+        {
+          "class_id": 27,
+          "class_name": "no-right",
+          "confidence": 0.936,
+          "bbox": {
+            "x1": 13.53,
+            "y1": 6.44,
+            "x2": 105.3,
+            "y2": 97.62
+          }
+        }
+      ],
+      "total_ms": 55.6,
+      "confidence_threshold": 0.2,
+      "round_trip_ms": 59.3
+    }
+  },
+  {
+    "kind": "single",
+    "file": "28_no-straight.png",
+    "expected": [
+      "no-straight"
+    ],
+    "passed": true,
+    "missing": [],
+    "extra": [],
+    "response": {
+      "width": 116,
+      "height": 122,
+      "inference_ms": 55.2,
+      "ocr_ms": 0.0,
+      "detections": [
+        {
+          "class_id": 28,
+          "class_name": "no-straight",
+          "confidence": 0.9497,
+          "bbox": {
+            "x1": 7.39,
+            "y1": 13.15,
+            "x2": 105.61,
+            "y2": 111.71
+          }
+        }
+      ],
+      "total_ms": 58.1,
+      "confidence_threshold": 0.2,
+      "round_trip_ms": 66.9
+    }
+  },
+  {
+    "kind": "single",
+    "file": "29_no-straight-or-left.png",
+    "expected": [
+      "no-straight-or-left"
+    ],
+    "passed": true,
+    "missing": [],
+    "extra": [],
+    "response": {
+      "width": 127,
+      "height": 119,
+      "inference_ms": 54.6,
+      "ocr_ms": 0.0,
+      "detections": [
+        {
+          "class_id": 29,
+          "class_name": "no-straight-or-left",
+          "confidence": 0.9604,
+          "bbox": {
+            "x1": 16.47,
+            "y1": 17.71,
+            "x2": 103.19,
+            "y2": 100.51
+          }
+        }
+      ],
+      "total_ms": 56.8,
+      "confidence_threshold": 0.2,
+      "round_trip_ms": 61.3
+    }
+  },
+  {
+    "kind": "single",
+    "file": "30_no-uturn.png",
+    "expected": [
+      "no-uturn"
+    ],
+    "passed": true,
+    "missing": [],
+    "extra": [],
+    "response": {
+      "width": 123,
+      "height": 121,
+      "inference_ms": 60.2,
+      "ocr_ms": 0.0,
+      "detections": [
+        {
+          "class_id": 30,
+          "class_name": "no-uturn",
+          "confidence": 0.6226,
+          "bbox": {
+            "x1": 28.68,
+            "y1": 8.26,
+            "x2": 106.38,
+            "y2": 104.55
+          }
+        }
+      ],
+      "total_ms": 63.0,
+      "confidence_threshold": 0.2,
+      "round_trip_ms": 117.3
+    }
+  },
+  {
+    "kind": "single",
+    "file": "32_pass-obstacle-on-either-side.png",
+    "expected": [
+      "pass-obstacle-on-either-side"
+    ],
+    "passed": true,
+    "missing": [],
+    "extra": [],
+    "response": {
+      "width": 158,
+      "height": 160,
+      "inference_ms": 57.3,
+      "ocr_ms": 0.0,
+      "detections": [
+        {
+          "class_id": 32,
+          "class_name": "pass-obstacle-on-either-side",
+          "confidence": 0.9819,
+          "bbox": {
+            "x1": 31.5,
+            "y1": 31.69,
+            "x2": 118.38,
+            "y2": 135.75
+          }
+        }
+      ],
+      "total_ms": 60.3,
+      "confidence_threshold": 0.2,
+      "round_trip_ms": 66.5
+    }
+  },
+  {
+    "kind": "single",
+    "file": "33_pass-right.png",
+    "expected": [
+      "pass-right"
+    ],
+    "passed": true,
+    "missing": [],
+    "extra": [],
+    "response": {
+      "width": 142,
+      "height": 128,
+      "inference_ms": 55.8,
+      "ocr_ms": 0.0,
+      "detections": [
+        {
+          "class_id": 33,
+          "class_name": "pass-right",
+          "confidence": 0.9658,
+          "bbox": {
+            "x1": 36.3,
+            "y1": 23.05,
+            "x2": 108.72,
+            "y2": 100.23
+          }
+        }
+      ],
+      "total_ms": 58.9,
+      "confidence_threshold": 0.2,
+      "round_trip_ms": 88.3
+    }
+  },
+  {
+    "kind": "single",
+    "file": "34_pedestrian-crossing-warning.png",
+    "expected": [
+      "pedestrian-crossing-warning"
+    ],
+    "passed": true,
+    "missing": [],
+    "extra": [],
+    "response": {
+      "width": 99,
+      "height": 83,
+      "inference_ms": 54.3,
+      "ocr_ms": 0.0,
+      "detections": [
+        {
+          "class_id": 34,
+          "class_name": "pedestrian-crossing-warning",
+          "confidence": 0.959,
+          "bbox": {
+            "x1": 15.24,
+            "y1": 9.71,
+            "x2": 86.24,
+            "y2": 68.49
+          }
+        }
+      ],
+      "total_ms": 56.2,
+      "confidence_threshold": 0.2,
+      "round_trip_ms": 60.6
+    }
+  },
+  {
+    "kind": "single",
+    "file": "35_railway-crossing-ahead-warning.png",
+    "expected": [
+      "railway-crossing-ahead-warning"
+    ],
+    "passed": true,
+    "missing": [],
+    "extra": [],
+    "response": {
+      "width": 232,
+      "height": 208,
+      "inference_ms": 43.8,
+      "ocr_ms": 0.0,
+      "detections": [
+        {
+          "class_id": 35,
+          "class_name": "railway-crossing-ahead-warning",
+          "confidence": 0.957,
+          "bbox": {
+            "x1": 48.21,
+            "y1": 39.42,
+            "x2": 185.6,
+            "y2": 169.29
+          }
+        }
+      ],
+      "total_ms": 48.3,
+      "confidence_threshold": 0.2,
+      "round_trip_ms": 53.3
+    }
+  },
+  {
+    "kind": "single",
+    "file": "36_reverse-turn-warning.png",
+    "expected": [
+      "reverse-turn-warning"
+    ],
+    "passed": true,
+    "missing": [],
+    "extra": [],
+    "response": {
+      "width": 127,
+      "height": 134,
+      "inference_ms": 44.0,
+      "ocr_ms": 0.0,
+      "detections": [
+        {
+          "class_id": 36,
+          "class_name": "reverse-turn-warning",
+          "confidence": 0.9336,
+          "bbox": {
+            "x1": 27.01,
+            "y1": 23.71,
+            "x2": 102.18,
+            "y2": 98.2
+          }
+        }
+      ],
+      "total_ms": 46.2,
+      "confidence_threshold": 0.2,
+      "round_trip_ms": 50.4
+    }
+  },
+  {
+    "kind": "single",
+    "file": "37_right-turn-only.png",
+    "expected": [
+      "right-turn-only"
+    ],
+    "passed": true,
+    "missing": [],
+    "extra": [],
+    "response": {
+      "width": 290,
+      "height": 247,
+      "inference_ms": 42.5,
+      "ocr_ms": 0.0,
+      "detections": [
+        {
+          "class_id": 37,
+          "class_name": "right-turn-only",
+          "confidence": 0.9517,
+          "bbox": {
+            "x1": 39.99,
+            "y1": 18.46,
+            "x2": 249.45,
+            "y2": 223.84
+          }
+        }
+      ],
+      "total_ms": 51.0,
+      "confidence_threshold": 0.2,
+      "round_trip_ms": 55.8
+    }
+  },
+  {
+    "kind": "single",
+    "file": "41_roundabout.png",
+    "expected": [
+      "roundabout"
+    ],
+    "passed": true,
+    "missing": [],
+    "extra": [],
+    "response": {
+      "width": 139,
+      "height": 130,
+      "inference_ms": 42.3,
+      "ocr_ms": 0.0,
+      "detections": [
+        {
+          "class_id": 41,
+          "class_name": "roundabout",
+          "confidence": 0.9526,
+          "bbox": {
+            "x1": 26.23,
+            "y1": 14.06,
+            "x2": 120.43,
+            "y2": 113.81
+          }
+        }
+      ],
+      "total_ms": 44.9,
+      "confidence_threshold": 0.2,
+      "round_trip_ms": 49.7
+    }
+  },
+  {
+    "kind": "single",
+    "file": "42_sharp-right-turn-warning.png",
+    "expected": [
+      "sharp-right-turn-warning"
+    ],
+    "passed": true,
+    "missing": [],
+    "extra": [],
+    "response": {
+      "width": 153,
+      "height": 144,
+      "inference_ms": 43.0,
+      "ocr_ms": 0.0,
+      "detections": [
+        {
+          "class_id": 42,
+          "class_name": "sharp-right-turn-warning",
+          "confidence": 0.9492,
+          "bbox": {
+            "x1": 26.66,
+            "y1": 19.66,
+            "x2": 127.9,
+            "y2": 113.44
+          }
+        }
+      ],
+      "total_ms": 46.4,
+      "confidence_threshold": 0.2,
+      "round_trip_ms": 50.7
+    }
+  },
+  {
+    "kind": "single",
+    "file": "44_slowdown-warning.png",
+    "expected": [
+      "slowdown-warning"
+    ],
+    "passed": true,
+    "missing": [],
+    "extra": [],
+    "response": {
+      "width": 140,
+      "height": 132,
+      "inference_ms": 45.9,
+      "ocr_ms": 0.0,
+      "detections": [
+        {
+          "class_id": 44,
+          "class_name": "slowdown-warning",
+          "confidence": 0.936,
+          "bbox": {
+            "x1": 26.25,
+            "y1": 29.42,
+            "x2": 106.53,
+            "y2": 99.04
+          }
+        }
+      ],
+      "total_ms": 50.3,
+      "confidence_threshold": 0.2,
+      "round_trip_ms": 54.3
+    }
+  },
+  {
+    "kind": "single",
+    "file": "45_speed-limit-15.png",
+    "expected": [
+      "speed-limit-15"
+    ],
+    "passed": true,
+    "missing": [],
+    "extra": [],
+    "response": {
+      "width": 131,
+      "height": 124,
+      "inference_ms": 48.3,
+      "ocr_ms": 191.9,
+      "detections": [
+        {
+          "class_id": 45,
+          "class_name": "speed-limit-15",
+          "confidence": 0.9634,
+          "bbox": {
+            "x1": 23.49,
+            "y1": 16.32,
+            "x2": 110.33,
+            "y2": 109.71
+          },
+          "speed_limit_ocr": {
+            "status": "confirmed",
+            "raw_text": "15",
+            "value": 15,
+            "confidence": 0.9999,
+            "applied": true,
+            "overrode_yolo": false,
+            "crop_side": 88,
+            "ocr_ms": 191.9
+          },
+          "classification_source": "yolo+ocr"
+        }
+      ],
+      "total_ms": 243.6,
+      "confidence_threshold": 0.2,
+      "round_trip_ms": 267.0
+    }
+  },
+  {
+    "kind": "single",
+    "file": "46_speed-limit-30.png",
+    "expected": [
+      "speed-limit-30"
+    ],
+    "passed": true,
+    "missing": [],
+    "extra": [],
+    "response": {
+      "width": 235,
+      "height": 214,
+      "inference_ms": 106.5,
+      "ocr_ms": 34.4,
+      "detections": [
+        {
+          "class_id": 46,
+          "class_name": "speed-limit-30",
+          "confidence": 0.9277,
+          "bbox": {
+            "x1": 30.34,
+            "y1": 32.31,
+            "x2": 205.26,
+            "y2": 198.83
+          },
+          "speed_limit_ocr": {
+            "status": "confirmed",
+            "raw_text": "30",
+            "value": 30,
+            "confidence": 1.0,
+            "applied": true,
+            "overrode_yolo": false,
+            "crop_side": 167,
+            "ocr_ms": 34.4
+          },
+          "classification_source": "yolo+ocr"
+        }
+      ],
+      "total_ms": 149.0,
+      "confidence_threshold": 0.2,
+      "round_trip_ms": 176.3
+    }
+  },
+  {
+    "kind": "single",
+    "file": "47_speed-limit-40.png",
+    "expected": [
+      "speed-limit-40"
+    ],
+    "passed": true,
+    "missing": [],
+    "extra": [],
+    "response": {
+      "width": 144,
+      "height": 140,
+      "inference_ms": 269.5,
+      "ocr_ms": 181.5,
+      "detections": [
+        {
+          "class_id": 47,
+          "class_name": "speed-limit-40",
+          "confidence": 0.9595,
+          "bbox": {
+            "x1": 20.42,
+            "y1": 16.88,
+            "x2": 128.25,
+            "y2": 122.62
+          },
+          "speed_limit_ocr": {
+            "status": "confirmed",
+            "raw_text": "40",
+            "value": 40,
+            "confidence": 1.0,
+            "applied": true,
+            "overrode_yolo": false,
+            "crop_side": 107,
+            "ocr_ms": 181.5
+          },
+          "classification_source": "yolo+ocr"
+        }
+      ],
+      "total_ms": 454.2,
+      "confidence_threshold": 0.2,
+      "round_trip_ms": 463.5
+    }
+  },
+  {
+    "kind": "single",
+    "file": "48_speed-limit-5.png",
+    "expected": [
+      "speed-limit-5"
+    ],
+    "passed": true,
+    "missing": [],
+    "extra": [],
+    "response": {
+      "width": 165,
+      "height": 151,
+      "inference_ms": 188.8,
+      "ocr_ms": 113.5,
+      "detections": [
+        {
+          "class_id": 48,
+          "class_name": "speed-limit-5",
+          "confidence": 0.9634,
+          "bbox": {
+            "x1": 22.75,
+            "y1": 13.15,
+            "x2": 147.73,
+            "y2": 139.61
+          },
+          "speed_limit_ocr": {
+            "status": "confirmed",
+            "raw_text": "5",
+            "value": 5,
+            "confidence": 0.9998,
+            "applied": true,
+            "overrode_yolo": false,
+            "crop_side": 126,
+            "ocr_ms": 113.5
+          },
+          "classification_source": "yolo+ocr"
+        }
+      ],
+      "total_ms": 306.2,
+      "confidence_threshold": 0.2,
+      "round_trip_ms": 310.9
+    }
+  },
+  {
+    "kind": "single",
+    "file": "49_speed-limit-50.png",
+    "expected": [
+      "speed-limit-50"
+    ],
+    "passed": true,
+    "missing": [],
+    "extra": [],
+    "response": {
+      "width": 83,
+      "height": 80,
+      "inference_ms": 130.6,
+      "ocr_ms": 121.8,
+      "detections": [
+        {
+          "class_id": 49,
+          "class_name": "speed-limit-50",
+          "confidence": 0.9541,
+          "bbox": {
+            "x1": 12.86,
+            "y1": 13.34,
+            "x2": 68.35,
+            "y2": 66.85
+          },
+          "speed_limit_ocr": {
+            "status": "confirmed",
+            "raw_text": "50",
+            "value": 50,
+            "confidence": 1.0,
+            "applied": true,
+            "overrode_yolo": false,
+            "crop_side": 54,
+            "ocr_ms": 121.8
+          },
+          "classification_source": "yolo+ocr"
+        }
+      ],
+      "total_ms": 258.7,
+      "confidence_threshold": 0.2,
+      "round_trip_ms": 278.0
+    }
+  },
+  {
+    "kind": "single",
+    "file": "50_speed-limit-60.png",
+    "expected": [
+      "speed-limit-60"
+    ],
+    "passed": true,
+    "missing": [],
+    "extra": [],
+    "response": {
+      "width": 158,
+      "height": 147,
+      "inference_ms": 86.5,
+      "ocr_ms": 140.4,
+      "detections": [
+        {
+          "class_id": 50,
+          "class_name": "speed-limit-60",
+          "confidence": 0.959,
+          "bbox": {
+            "x1": 20.49,
+            "y1": 9.94,
+            "x2": 145.9,
+            "y2": 133.19
+          },
+          "speed_limit_ocr": {
+            "status": "confirmed",
+            "raw_text": "60",
+            "value": 60,
+            "confidence": 1.0,
+            "applied": true,
+            "overrode_yolo": false,
+            "crop_side": 125,
+            "ocr_ms": 140.4
+          },
+          "classification_source": "yolo+ocr"
+        }
+      ],
+      "total_ms": 231.0,
+      "confidence_threshold": 0.2,
+      "round_trip_ms": 241.1
+    }
+  },
+  {
+    "kind": "single",
+    "file": "51_speed-limit-80.png",
+    "expected": [
+      "speed-limit-80"
+    ],
+    "passed": true,
+    "missing": [],
+    "extra": [],
+    "response": {
+      "width": 133,
+      "height": 125,
+      "inference_ms": 130.5,
+      "ocr_ms": 118.0,
+      "detections": [
+        {
+          "class_id": 51,
+          "class_name": "speed-limit-80",
+          "confidence": 0.9102,
+          "bbox": {
+            "x1": 21.2,
+            "y1": 13.14,
+            "x2": 114.5,
+            "y2": 109.93
+          },
+          "speed_limit_ocr": {
+            "status": "confirmed",
+            "raw_text": "80",
+            "value": 80,
+            "confidence": 1.0,
+            "applied": true,
+            "overrode_yolo": false,
+            "crop_side": 94,
+            "ocr_ms": 118.0
+          },
+          "classification_source": "yolo+ocr"
+        }
+      ],
+      "total_ms": 252.3,
+      "confidence_threshold": 0.2,
+      "round_trip_ms": 259.2
+    }
+  },
+  {
+    "kind": "single",
+    "file": "52_steep-descent-warning.png",
+    "expected": [
+      "steep-descent-warning"
+    ],
+    "passed": true,
+    "missing": [],
+    "extra": [],
+    "response": {
+      "width": 136,
+      "height": 123,
+      "inference_ms": 55.8,
+      "ocr_ms": 0.0,
+      "detections": [
+        {
+          "class_id": 52,
+          "class_name": "steep-descent-warning",
+          "confidence": 0.936,
+          "bbox": {
+            "x1": 17.98,
+            "y1": 12.32,
+            "x2": 114.75,
+            "y2": 102.74
+          }
+        }
+      ],
+      "total_ms": 58.9,
+      "confidence_threshold": 0.2,
+      "round_trip_ms": 62.9
+    }
+  },
+  {
+    "kind": "single",
+    "file": "53_stop-for-inspection.png",
+    "expected": [
+      "stop-for-inspection"
+    ],
+    "passed": true,
+    "missing": [],
+    "extra": [],
+    "response": {
+      "width": 142,
+      "height": 132,
+      "inference_ms": 75.9,
+      "ocr_ms": 0.0,
+      "detections": [
+        {
+          "class_id": 53,
+          "class_name": "stop-for-inspection",
+          "confidence": 0.959,
+          "bbox": {
+            "x1": 28.98,
+            "y1": 23.44,
+            "x2": 112.16,
+            "y2": 114.04
+          }
+        }
+      ],
+      "total_ms": 79.0,
+      "confidence_threshold": 0.2,
+      "round_trip_ms": 88.8
+    }
+  },
+  {
+    "kind": "single",
+    "file": "54_stop-sign.png",
+    "expected": [
+      "stop-sign"
+    ],
+    "passed": true,
+    "missing": [],
+    "extra": [],
+    "response": {
+      "width": 167,
+      "height": 157,
+      "inference_ms": 132.5,
+      "ocr_ms": 0.0,
+      "detections": [
+        {
+          "class_id": 54,
+          "class_name": "stop-sign",
+          "confidence": 0.9551,
+          "bbox": {
+            "x1": 31.41,
+            "y1": 20.48,
+            "x2": 130.34,
+            "y2": 128.38
+          }
+        }
+      ],
+      "total_ms": 141.0,
+      "confidence_threshold": 0.2,
+      "round_trip_ms": 150.0
+    }
+  },
+  {
+    "kind": "single",
+    "file": "55_straight-only.png",
+    "expected": [
+      "straight-only"
+    ],
+    "passed": true,
+    "missing": [],
+    "extra": [],
+    "response": {
+      "width": 136,
+      "height": 117,
+      "inference_ms": 119.5,
+      "ocr_ms": 0.0,
+      "detections": [
+        {
+          "class_id": 55,
+          "class_name": "straight-only",
+          "confidence": 0.98,
+          "bbox": {
+            "x1": 29.25,
+            "y1": 24.76,
+            "x2": 95.09,
+            "y2": 89.46
+          }
+        }
+      ],
+      "total_ms": 126.4,
+      "confidence_threshold": 0.2,
+      "round_trip_ms": 133.7
+    }
+  },
+  {
+    "kind": "single",
+    "file": "56_straight-or-right.png",
+    "expected": [
+      "straight-or-right"
+    ],
+    "passed": true,
+    "missing": [],
+    "extra": [],
+    "response": {
+      "width": 101,
+      "height": 119,
+      "inference_ms": 87.0,
+      "ocr_ms": 0.0,
+      "detections": [
+        {
+          "class_id": 56,
+          "class_name": "straight-or-right",
+          "confidence": 0.916,
+          "bbox": {
+            "x1": 24.38,
+            "y1": 23.1,
+            "x2": 68.7,
+            "y2": 96.32
+          }
+        }
+      ],
+      "total_ms": 89.6,
+      "confidence_threshold": 0.2,
+      "round_trip_ms": 96.4
+    }
+  },
+  {
+    "kind": "single",
+    "file": "58_traffic-light-ahead.png",
+    "expected": [
+      "traffic-light-ahead"
+    ],
+    "passed": true,
+    "missing": [],
+    "extra": [],
+    "response": {
+      "width": 134,
+      "height": 146,
+      "inference_ms": 143.6,
+      "ocr_ms": 0.0,
+      "detections": [
+        {
+          "class_id": 58,
+          "class_name": "traffic-light-ahead",
+          "confidence": 0.9507,
+          "bbox": {
+            "x1": 23.53,
+            "y1": 31.31,
+            "x2": 117.83,
+            "y2": 111.55
+          }
+        }
+      ],
+      "total_ms": 146.0,
+      "confidence_threshold": 0.2,
+      "round_trip_ms": 151.1
+    }
+  },
+  {
+    "kind": "single",
+    "file": "59_use-horn.png",
+    "expected": [
+      "use-horn"
+    ],
+    "passed": true,
+    "missing": [],
+    "extra": [],
+    "response": {
+      "width": 161,
+      "height": 152,
+      "inference_ms": 73.8,
+      "ocr_ms": 0.0,
+      "detections": [
+        {
+          "class_id": 59,
+          "class_name": "use-horn",
+          "confidence": 0.8813,
+          "bbox": {
+            "x1": 26.29,
+            "y1": 21.7,
+            "x2": 137.6,
+            "y2": 132.57
+          }
+        }
+      ],
+      "total_ms": 76.8,
+      "confidence_threshold": 0.2,
+      "round_trip_ms": 80.7
+    }
+  },
+  {
+    "kind": "single",
+    "file": "60_uturn-lane.png",
+    "expected": [
+      "uturn-lane"
+    ],
+    "passed": true,
+    "missing": [],
+    "extra": [],
+    "response": {
+      "width": 279,
+      "height": 257,
+      "inference_ms": 53.9,
+      "ocr_ms": 0.0,
+      "detections": [
+        {
+          "class_id": 60,
+          "class_name": "uturn-lane",
+          "confidence": 0.9526,
+          "bbox": {
+            "x1": 37.76,
+            "y1": 35.96,
+            "x2": 224.94,
+            "y2": 226.69
+          }
+        }
+      ],
+      "total_ms": 60.3,
+      "confidence_threshold": 0.2,
+      "round_trip_ms": 65.0
+    }
+  },
+  {
+    "kind": "single",
+    "file": "61_village-ahead-warning.png",
+    "expected": [
+      "village-ahead-warning"
+    ],
+    "passed": true,
+    "missing": [],
+    "extra": [],
+    "response": {
+      "width": 141,
+      "height": 131,
+      "inference_ms": 48.2,
+      "ocr_ms": 0.0,
+      "detections": [
+        {
+          "class_id": 61,
+          "class_name": "village-ahead-warning",
+          "confidence": 0.9351,
+          "bbox": {
+            "x1": 22.8,
+            "y1": 21.54,
+            "x2": 108.72,
+            "y2": 100.3
+          }
+        }
+      ],
+      "total_ms": 50.6,
+      "confidence_threshold": 0.2,
+      "round_trip_ms": 54.0
+    }
+  },
+  {
+    "kind": "single",
+    "file": "62_winding-road-warning.png",
+    "expected": [
+      "winding-road-warning"
+    ],
+    "passed": true,
+    "missing": [],
+    "extra": [],
+    "response": {
+      "width": 109,
+      "height": 98,
+      "inference_ms": 43.0,
+      "ocr_ms": 0.0,
+      "detections": [
+        {
+          "class_id": 62,
+          "class_name": "winding-road-warning",
+          "confidence": 0.8784,
+          "bbox": {
+            "x1": 21.23,
+            "y1": 15.39,
+            "x2": 88.05,
+            "y2": 76.04
+          }
+        }
+      ],
+      "total_ms": 45.7,
+      "confidence_threshold": 0.2,
+      "round_trip_ms": 49.6
+    }
+  },
+  {
+    "kind": "four_sign",
+    "file": "frame_01.png",
+    "expected": [
+      "accident-prone-area-warning",
+      "bicycle-path",
+      "bicycle-warning",
+      "cars-only"
+    ],
+    "passed": true,
+    "missing": [],
+    "extra": [],
+    "response": {
+      "width": 640,
+      "height": 640,
+      "inference_ms": 72.5,
+      "ocr_ms": 0.0,
+      "detections": [
+        {
+          "class_id": 0,
+          "class_name": "accident-prone-area-warning",
+          "confidence": 0.8911,
+          "bbox": {
+            "x1": 67.12,
+            "y1": 77.25,
+            "x2": 219.25,
+            "y2": 236.25
+          }
+        },
+        {
+          "class_id": 2,
+          "class_name": "bicycle-warning",
+          "confidence": 0.8599,
+          "bbox": {
+            "x1": 49.38,
+            "y1": 380.0,
+            "x2": 272.0,
+            "y2": 573.0
+          }
+        },
+        {
+          "class_id": 6,
+          "class_name": "cars-only",
+          "confidence": 0.7983,
+          "bbox": {
+            "x1": 380.5,
+            "y1": 375.25,
+            "x2": 595.0,
+            "y2": 586.0
+          }
+        },
+        {
+          "class_id": 1,
+          "class_name": "bicycle-path",
+          "confidence": 0.7817,
+          "bbox": {
+            "x1": 364.25,
+            "y1": 42.88,
+            "x2": 607.5,
+            "y2": 274.5
+          }
+        }
+      ],
+      "total_ms": 98.0,
+      "confidence_threshold": 0.2,
+      "round_trip_ms": 132.6
+    }
+  },
+  {
+    "kind": "four_sign",
+    "file": "frame_02.png",
+    "expected": [
+      "children-crossing-warning",
+      "construction-ahead-warning",
+      "crossroad-right-warning",
+      "gated-railway-crossing-ahead-warning"
+    ],
+    "passed": false,
+    "missing": [
+      "gated-railway-crossing-ahead-warning"
+    ],
+    "extra": [
+      "slowdown-warning",
+      "general-warning"
+    ],
+    "response": {
+      "width": 640,
+      "height": 640,
+      "inference_ms": 75.3,
+      "ocr_ms": 0.0,
+      "detections": [
+        {
+          "class_id": 10,
+          "class_name": "construction-ahead-warning",
+          "confidence": 0.8042,
+          "bbox": {
+            "x1": 391.0,
+            "y1": 79.25,
+            "x2": 575.0,
+            "y2": 225.25
+          }
+        },
+        {
+          "class_id": 9,
+          "class_name": "children-crossing-warning",
+          "confidence": 0.5488,
+          "bbox": {
+            "x1": 40.38,
+            "y1": 56.06,
+            "x2": 246.75,
+            "y2": 249.0
+          }
+        },
+        {
+          "class_id": 13,
+          "class_name": "crossroad-right-warning",
+          "confidence": 0.5234,
+          "bbox": {
+            "x1": 58.5,
+            "y1": 375.5,
+            "x2": 283.0,
+            "y2": 576.0
+          }
+        },
+        {
+          "class_id": 44,
+          "class_name": "slowdown-warning",
+          "confidence": 0.4688,
+          "bbox": {
+            "x1": 389.0,
+            "y1": 388.5,
+            "x2": 561.5,
+            "y2": 558.0
+          }
+        },
+        {
+          "class_id": 15,
+          "class_name": "general-warning",
+          "confidence": 0.2871,
+          "bbox": {
+            "x1": 58.5,
+            "y1": 375.5,
+            "x2": 283.0,
+            "y2": 576.0
+          }
+        }
+      ],
+      "total_ms": 100.5,
+      "confidence_threshold": 0.2,
+      "round_trip_ms": 111.4
+    }
+  },
+  {
+    "kind": "four_sign",
+    "file": "frame_03.png",
+    "expected": [
+      "general-warning",
+      "give-way",
+      "left-or-right",
+      "left-turn-only"
+    ],
+    "passed": false,
+    "missing": [
+      "give-way"
+    ],
+    "extra": [],
+    "response": {
+      "width": 640,
+      "height": 640,
+      "inference_ms": 76.0,
+      "ocr_ms": 0.0,
+      "detections": [
+        {
+          "class_id": 19,
+          "class_name": "left-turn-only",
+          "confidence": 0.915,
+          "bbox": {
+            "x1": 379.5,
+            "y1": 368.25,
+            "x2": 590.0,
+            "y2": 578.5
+          }
+        },
+        {
+          "class_id": 15,
+          "class_name": "general-warning",
+          "confidence": 0.8408,
+          "bbox": {
+            "x1": 68.0,
+            "y1": 71.0,
+            "x2": 220.38,
+            "y2": 200.5
+          }
+        },
+        {
+          "class_id": 18,
+          "class_name": "left-or-right",
+          "confidence": 0.7983,
+          "bbox": {
+            "x1": 35.25,
+            "y1": 356.5,
+            "x2": 284.0,
+            "y2": 594.0
+          }
+        },
+        {
+          "class_id": 19,
+          "class_name": "left-turn-only",
+          "confidence": 0.2576,
+          "bbox": {
+            "x1": 35.25,
+            "y1": 356.5,
+            "x2": 284.0,
+            "y2": 594.0
+          }
+        }
+      ],
+      "total_ms": 99.2,
+      "confidence_threshold": 0.2,
+      "round_trip_ms": 107.5
+    }
+  },
+  {
+    "kind": "four_sign",
+    "file": "frame_04.png",
+    "expected": [
+      "no-cars",
+      "no-entry",
+      "no-horn",
+      "no-left"
+    ],
+    "passed": false,
+    "missing": [
+      "no-cars",
+      "no-left"
+    ],
+    "extra": [],
+    "response": {
+      "width": 640,
+      "height": 640,
+      "inference_ms": 82.3,
+      "ocr_ms": 0.0,
+      "detections": [
+        {
+          "class_id": 21,
+          "class_name": "no-entry",
+          "confidence": 0.9302,
+          "bbox": {
+            "x1": 388.0,
+            "y1": 68.31,
+            "x2": 549.0,
+            "y2": 247.75
+          }
+        },
+        {
+          "class_id": 22,
+          "class_name": "no-horn",
+          "confidence": 0.709,
+          "bbox": {
+            "x1": 41.06,
+            "y1": 366.5,
+            "x2": 272.75,
+            "y2": 590.5
+          }
+        }
+      ],
+      "total_ms": 107.1,
+      "confidence_threshold": 0.2,
+      "round_trip_ms": 114.3
+    }
+  },
+  {
+    "kind": "four_sign",
+    "file": "frame_05.png",
+    "expected": [
+      "no-left-and-right",
+      "no-overtaking",
+      "no-right",
+      "no-straight"
+    ],
+    "passed": false,
+    "missing": [
+      "no-overtaking",
+      "no-straight"
+    ],
+    "extra": [
+      "speed-limit-60"
+    ],
+    "response": {
+      "width": 640,
+      "height": 640,
+      "inference_ms": 95.9,
+      "ocr_ms": 35.2,
+      "detections": [
+        {
+          "class_id": 27,
+          "class_name": "no-right",
+          "confidence": 0.9268,
+          "bbox": {
+            "x1": 41.88,
+            "y1": 362.0,
+            "x2": 281.0,
+            "y2": 594.0
+          }
+        },
+        {
+          "class_id": 50,
+          "class_name": "speed-limit-60",
+          "confidence": 0.2323,
+          "bbox": {
+            "x1": 358.0,
+            "y1": 52.88,
+            "x2": 605.5,
+            "y2": 275.0
+          },
+          "speed_limit_ocr": {
+            "status": "not-plausible",
+            "raw_text": "3",
+            "value": null,
+            "confidence": 0.1433,
+            "applied": false,
+            "overrode_yolo": false,
+            "crop_side": 223,
+            "ocr_ms": 35.2
+          },
+          "classification_source": "yolo"
+        },
+        {
+          "class_id": 24,
+          "class_name": "no-left-and-right",
+          "confidence": 0.2214,
+          "bbox": {
+            "x1": 52.75,
+            "y1": 43.0,
+            "x2": 281.5,
+            "y2": 270.5
+          }
+        }
+      ],
+      "total_ms": 154.8,
+      "confidence_threshold": 0.2,
+      "round_trip_ms": 174.8
+    }
+  },
+  {
+    "kind": "four_sign",
+    "file": "frame_06.png",
+    "expected": [
+      "no-straight-or-left",
+      "no-uturn",
+      "pass-obstacle-on-either-side",
+      "pass-right"
+    ],
+    "passed": false,
+    "missing": [
+      "no-straight-or-left",
+      "pass-obstacle-on-either-side"
+    ],
+    "extra": [
+      "no-left",
+      "general-warning"
+    ],
+    "response": {
+      "width": 640,
+      "height": 640,
+      "inference_ms": 165.3,
+      "ocr_ms": 0.0,
+      "detections": [
+        {
+          "class_id": 30,
+          "class_name": "no-uturn",
+          "confidence": 0.9224,
+          "bbox": {
+            "x1": 399.25,
+            "y1": 33.0,
+            "x2": 593.5,
+            "y2": 268.25
+          }
+        },
+        {
+          "class_id": 23,
+          "class_name": "no-left",
+          "confidence": 0.9038,
+          "bbox": {
+            "x1": 45.5,
+            "y1": 59.88,
+            "x2": 261.5,
+            "y2": 258.5
+          }
+        },
+        {
+          "class_id": 15,
+          "class_name": "general-warning",
+          "confidence": 0.6187,
+          "bbox": {
+            "x1": 71.0,
+            "y1": 390.5,
+            "x2": 235.25,
+            "y2": 580.5
+          }
+        },
+        {
+          "class_id": 33,
+          "class_name": "pass-right",
+          "confidence": 0.5391,
+          "bbox": {
+            "x1": 404.75,
+            "y1": 389.5,
+            "x2": 560.0,
+            "y2": 560.0
+          }
+        }
+      ],
+      "total_ms": 281.0,
+      "confidence_threshold": 0.2,
+      "round_trip_ms": 304.7
+    }
+  },
+  {
+    "kind": "four_sign",
+    "file": "frame_07.png",
+    "expected": [
+      "pedestrian-crossing-warning",
+      "railway-crossing-ahead-warning",
+      "reverse-turn-warning",
+      "right-turn-only"
+    ],
+    "passed": false,
+    "missing": [
+      "reverse-turn-warning"
+    ],
+    "extra": [
+      "winding-road-warning"
+    ],
+    "response": {
+      "width": 640,
+      "height": 640,
+      "inference_ms": 138.8,
+      "ocr_ms": 0.0,
+      "detections": [
+        {
+          "class_id": 37,
+          "class_name": "right-turn-only",
+          "confidence": 0.9595,
+          "bbox": {
+            "x1": 370.0,
+            "y1": 372.0,
+            "x2": 592.5,
+            "y2": 583.0
+          }
+        },
+        {
+          "class_id": 34,
+          "class_name": "pedestrian-crossing-warning",
+          "confidence": 0.8701,
+          "bbox": {
+            "x1": 60.06,
+            "y1": 58.5,
+            "x2": 271.0,
+            "y2": 244.75
+          }
+        },
+        {
+          "class_id": 35,
+          "class_name": "railway-crossing-ahead-warning",
+          "confidence": 0.686,
+          "bbox": {
+            "x1": 395.0,
+            "y1": 76.12,
+            "x2": 571.5,
+            "y2": 249.75
+          }
+        },
+        {
+          "class_id": 62,
+          "class_name": "winding-road-warning",
+          "confidence": 0.2007,
+          "bbox": {
+            "x1": 75.81,
+            "y1": 383.75,
+            "x2": 248.12,
+            "y2": 553.5
+          }
+        }
+      ],
+      "total_ms": 163.1,
+      "confidence_threshold": 0.2,
+      "round_trip_ms": 214.1
+    }
+  },
+  {
+    "kind": "four_sign",
+    "file": "frame_08.png",
+    "expected": [
+      "roundabout",
+      "sharp-right-turn-warning",
+      "slowdown-warning",
+      "speed-limit-15"
+    ],
+    "passed": true,
+    "missing": [],
+    "extra": [
+      "winding-road-warning",
+      "general-warning"
+    ],
+    "response": {
+      "width": 640,
+      "height": 640,
+      "inference_ms": 179.3,
+      "ocr_ms": 83.2,
+      "detections": [
+        {
+          "class_id": 41,
+          "class_name": "roundabout",
+          "confidence": 0.9482,
+          "bbox": {
+            "x1": 65.12,
+            "y1": 44.38,
+            "x2": 272.25,
+            "y2": 264.25
+          }
+        },
+        {
+          "class_id": 45,
+          "class_name": "speed-limit-15",
+          "confidence": 0.8442,
+          "bbox": {
+            "x1": 382.5,
+            "y1": 372.5,
+            "x2": 586.0,
+            "y2": 586.0
+          },
+          "speed_limit_ocr": {
+            "status": "confirmed",
+            "raw_text": "15",
+            "value": 15,
+            "confidence": 1.0,
+            "applied": true,
+            "overrode_yolo": false,
+            "crop_side": 204,
+            "ocr_ms": 83.2
+          },
+          "classification_source": "yolo+ocr"
+        },
+        {
+          "class_id": 42,
+          "class_name": "sharp-right-turn-warning",
+          "confidence": 0.3721,
+          "bbox": {
+            "x1": 385.0,
+            "y1": 54.94,
+            "x2": 588.0,
+            "y2": 244.5
+          }
+        },
+        {
+          "class_id": 44,
+          "class_name": "slowdown-warning",
+          "confidence": 0.3435,
+          "bbox": {
+            "x1": 69.62,
+            "y1": 401.75,
+            "x2": 236.25,
+            "y2": 552.5
+          }
+        },
+        {
+          "class_id": 62,
+          "class_name": "winding-road-warning",
+          "confidence": 0.2438,
+          "bbox": {
+            "x1": 385.0,
+            "y1": 54.94,
+            "x2": 588.0,
+            "y2": 244.5
+          }
+        },
+        {
+          "class_id": 15,
+          "class_name": "general-warning",
+          "confidence": 0.2108,
+          "bbox": {
+            "x1": 69.62,
+            "y1": 401.75,
+            "x2": 236.25,
+            "y2": 552.5
+          }
+        }
+      ],
+      "total_ms": 294.7,
+      "confidence_threshold": 0.2,
+      "round_trip_ms": 302.9
+    }
+  },
+  {
+    "kind": "four_sign",
+    "file": "frame_09.png",
+    "expected": [
+      "speed-limit-30",
+      "speed-limit-40",
+      "speed-limit-5",
+      "speed-limit-50"
+    ],
+    "passed": false,
+    "missing": [
+      "speed-limit-50"
+    ],
+    "extra": [],
+    "response": {
+      "width": 640,
+      "height": 640,
+      "inference_ms": 197.0,
+      "ocr_ms": 211.8,
+      "detections": [
+        {
+          "class_id": 48,
+          "class_name": "speed-limit-5",
+          "confidence": 0.9604,
+          "bbox": {
+            "x1": 48.31,
+            "y1": 367.75,
+            "x2": 280.25,
+            "y2": 593.0
+          },
+          "speed_limit_ocr": {
+            "status": "confirmed",
+            "raw_text": "5",
+            "value": 5,
+            "confidence": 0.9997,
+            "applied": true,
+            "overrode_yolo": false,
+            "crop_side": 226,
+            "ocr_ms": 65.9
+          },
+          "classification_source": "yolo+ocr"
+        },
+        {
+          "class_id": 47,
+          "class_name": "speed-limit-40",
+          "confidence": 0.7759,
+          "bbox": {
+            "x1": 373.25,
+            "y1": 49.25,
+            "x2": 596.5,
+            "y2": 265.5
+          },
+          "speed_limit_ocr": {
+            "status": "confirmed",
+            "raw_text": "40",
+            "value": 40,
+            "confidence": 1.0,
+            "applied": true,
+            "overrode_yolo": false,
+            "crop_side": 217,
+            "ocr_ms": 72.6
+          },
+          "classification_source": "yolo+ocr"
+        },
+        {
+          "class_id": 46,
+          "class_name": "speed-limit-30",
+          "confidence": 0.6689,
+          "bbox": {
+            "x1": 50.38,
+            "y1": 62.69,
+            "x2": 272.5,
+            "y2": 273.0
+          },
+          "speed_limit_ocr": {
+            "status": "confirmed",
+            "raw_text": "30",
+            "value": 30,
+            "confidence": 1.0,
+            "applied": true,
+            "overrode_yolo": false,
+            "crop_side": 211,
+            "ocr_ms": 73.3
+          },
+          "classification_source": "yolo+ocr"
+        }
+      ],
+      "total_ms": 444.9,
+      "confidence_threshold": 0.2,
+      "round_trip_ms": 479.3
+    }
+  },
+  {
+    "kind": "four_sign",
+    "file": "frame_10.png",
+    "expected": [
+      "speed-limit-60",
+      "speed-limit-80",
+      "steep-descent-warning",
+      "stop-for-inspection"
+    ],
+    "passed": true,
+    "missing": [],
+    "extra": [],
+    "response": {
+      "width": 640,
+      "height": 640,
+      "inference_ms": 188.5,
+      "ocr_ms": 167.1,
+      "detections": [
+        {
+          "class_id": 50,
+          "class_name": "speed-limit-60",
+          "confidence": 0.9497,
+          "bbox": {
+            "x1": 45.88,
+            "y1": 40.5,
+            "x2": 291.0,
+            "y2": 274.5
+          },
+          "speed_limit_ocr": {
+            "status": "confirmed",
+            "raw_text": "60",
+            "value": 60,
+            "confidence": 1.0,
+            "applied": true,
+            "overrode_yolo": false,
+            "crop_side": 235,
+            "ocr_ms": 92.5
+          },
+          "classification_source": "yolo+ocr"
+        },
+        {
+          "class_id": 52,
+          "class_name": "steep-descent-warning",
+          "confidence": 0.8975,
+          "bbox": {
+            "x1": 51.12,
+            "y1": 370.0,
+            "x2": 267.5,
+            "y2": 572.0
+          }
+        },
+        {
+          "class_id": 53,
+          "class_name": "stop-for-inspection",
+          "confidence": 0.8911,
+          "bbox": {
+            "x1": 386.75,
+            "y1": 386.75,
+            "x2": 571.5,
+            "y2": 581.0
+          }
+        },
+        {
+          "class_id": 51,
+          "class_name": "speed-limit-80",
+          "confidence": 0.8799,
+          "bbox": {
+            "x1": 378.75,
+            "y1": 47.62,
+            "x2": 595.5,
+            "y2": 265.25
+          },
+          "speed_limit_ocr": {
+            "status": "confirmed",
+            "raw_text": "80",
+            "value": 80,
+            "confidence": 1.0,
+            "applied": true,
+            "overrode_yolo": false,
+            "crop_side": 218,
+            "ocr_ms": 74.6
+          },
+          "classification_source": "yolo+ocr"
+        }
+      ],
+      "total_ms": 392.4,
+      "confidence_threshold": 0.2,
+      "round_trip_ms": 399.9
+    }
+  },
+  {
+    "kind": "four_sign",
+    "file": "frame_11.png",
+    "expected": [
+      "stop-sign",
+      "straight-only",
+      "straight-or-right",
+      "traffic-light-ahead"
+    ],
+    "passed": false,
+    "missing": [
+      "straight-or-right",
+      "straight-only"
+    ],
+    "extra": [
+      "uturn-lane",
+      "roundabout"
+    ],
+    "response": {
+      "width": 640,
+      "height": 640,
+      "inference_ms": 175.0,
+      "ocr_ms": 0.0,
+      "detections": [
+        {
+          "class_id": 58,
+          "class_name": "traffic-light-ahead",
+          "confidence": 0.9614,
+          "bbox": {
+            "x1": 387.75,
+            "y1": 384.5,
+            "x2": 586.5,
+            "y2": 565.0
+          }
+        },
+        {
+          "class_id": 54,
+          "class_name": "stop-sign",
+          "confidence": 0.6929,
+          "bbox": {
+            "x1": 59.38,
+            "y1": 53.88,
+            "x2": 253.62,
+            "y2": 249.75
+          }
+        },
+        {
+          "class_id": 60,
+          "class_name": "uturn-lane",
+          "confidence": 0.3596,
+          "bbox": {
+            "x1": 391.0,
+            "y1": 76.19,
+            "x2": 541.0,
+            "y2": 232.0
+          }
+        },
+        {
+          "class_id": 41,
+          "class_name": "roundabout",
+          "confidence": 0.3401,
+          "bbox": {
+            "x1": 91.88,
+            "y1": 388.75,
+            "x2": 207.88,
+            "y2": 571.0
+          }
+        }
+      ],
+      "total_ms": 199.6,
+      "confidence_threshold": 0.2,
+      "round_trip_ms": 208.0
+    }
+  },
+  {
+    "kind": "four_sign",
+    "file": "frame_12.png",
+    "expected": [
+      "use-horn",
+      "uturn-lane",
+      "village-ahead-warning",
+      "winding-road-warning"
+    ],
+    "passed": true,
+    "missing": [],
+    "extra": [
+      "cars-only"
+    ],
+    "response": {
+      "width": 640,
+      "height": 640,
+      "inference_ms": 80.2,
+      "ocr_ms": 0.0,
+      "detections": [
+        {
+          "class_id": 62,
+          "class_name": "winding-road-warning",
+          "confidence": 0.9111,
+          "bbox": {
+            "x1": 390.0,
+            "y1": 389.0,
+            "x2": 577.5,
+            "y2": 556.0
+          }
+        },
+        {
+          "class_id": 60,
+          "class_name": "uturn-lane",
+          "confidence": 0.877,
+          "bbox": {
+            "x1": 371.5,
+            "y1": 63.94,
+            "x2": 577.0,
+            "y2": 262.5
+          }
+        },
+        {
+          "class_id": 6,
+          "class_name": "cars-only",
+          "confidence": 0.3008,
+          "bbox": {
+            "x1": 57.94,
+            "y1": 56.5,
+            "x2": 270.25,
+            "y2": 264.5
+          }
+        },
+        {
+          "class_id": 59,
+          "class_name": "use-horn",
+          "confidence": 0.2659,
+          "bbox": {
+            "x1": 57.94,
+            "y1": 56.5,
+            "x2": 270.25,
+            "y2": 264.5
+          }
+        },
+        {
+          "class_id": 61,
+          "class_name": "village-ahead-warning",
+          "confidence": 0.2429,
+          "bbox": {
+            "x1": 61.88,
+            "y1": 387.25,
+            "x2": 244.0,
+            "y2": 553.5
+          }
+        }
+      ],
+      "total_ms": 111.1,
+      "confidence_threshold": 0.2,
+      "round_trip_ms": 121.2
+    }
+  }
+]
